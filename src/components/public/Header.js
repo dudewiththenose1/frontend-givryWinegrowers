@@ -2,11 +2,9 @@ import React from "react";
 import  { useState, useEffect } from 'react';
 import { Navbar, NavbarContent, NavbarItem, Link, Button, NavbarBrand } from "@nextui-org/react";
 
-import { accountService } from "@/_services/account.service"; 
-
 import logo from '@/styles/logo_removed.png';
 import './header.css';
-import SignUp from "../auth/SignUp";
+
 
 const NoGuestNavbar = () => {
     
