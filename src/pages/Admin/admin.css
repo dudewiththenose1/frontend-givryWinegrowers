@@ -1,0 +1,26 @@
+#admin {
+    display : flex;
+    background-color: white; 
+}
+
+
+
+.AHeader{
+    text-align: center;
+    line-height: 50px;
+    background-color: black;
+    
+    
+}
+
+.SideMenu{
+    
+    flex-grow:1;
+    border-right: solid 1px grey;
+}
+
+#admin_body{
+    flex-grow:6;
+    padding-left : 15 px;
+    
+}

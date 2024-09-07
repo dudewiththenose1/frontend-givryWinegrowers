@@ -1,0 +1,51 @@
+.image-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.image {
+    position: absolute;
+    background-image: url('@/styles/homePage3.jpg');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(60%);
+}
+
+.image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent 50%, black 100%);
+    opacity: 1;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Assure que le contenu est aligné en colonne */
+}
+
+.logo {
+    display: flex;
+    justify-content: center; /* Centre horizontalement le logo */
+    transform: translateY(-600px);
+    opacity: 30%;
+    
+}
+
+.logo img {
+    transform: translateX(20px);
+    max-width: 100%; /* Rend le logo responsive */
+    height: auto; /* Conserve les proportions du logo *//* Limite la hauteur maximale pour qu'il ne prenne pas trop de place */
+}

@@ -1,0 +1,55 @@
+.preloader {
+    height: 100vh;
+    width: 100%;
+    background: 
+		  radial-gradient(farthest-side at -33.33% 50%,#0000 52%,#E5751F 54% 57%,#0000 59%) 0 calc(400px/2),
+		  radial-gradient(farthest-side at 50% 133.33%,#0000 52%,#E5751F 54% 57%,#0000 59%) calc(400px/2) 0,
+		  radial-gradient(farthest-side at 133.33% 50%,#0000 52%,#E5751F 54% 57%,#0000 59%),
+		  radial-gradient(farthest-side at 50% -33.33%,#0000 52%,#E5751F 54% 57%,#0000 59%),
+		  #861F41;
+	background-size: calc(400px/4.667) 400px,400px calc(400px/4.667);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.loader {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(0deg, rgba(255, 61, 0, 0.2) 33%, #ff3d00 100%);
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 244px;
+  height: 244px;
+  border-radius: 50%;
+  background: #263238;
+}
+@keyframes rotation {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg)}
+} 
+
+.preloader img {
+    max-width: 500px;  
+    max-height: 500px; 
+    width: auto;       
+    height: auto;
+    position: absolute; 
+    z-index: 1;
+} 

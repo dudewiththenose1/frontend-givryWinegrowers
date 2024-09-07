@@ -1,0 +1,6 @@
+export { default as Layout } from './Layout'
+export { default as Classement } from './Classement'
+export { default as Equipe } from './Equipe'
+export { default as Home } from './Home'
+export { default as Evenement } from './Evenement'
+export { default as Blog } from './Blog'
