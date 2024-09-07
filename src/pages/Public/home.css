@@ -47,5 +47,5 @@
 .logo img {
     transform: translateX(20px);
     max-width: 100%; /* Rend le logo responsive */
-    height: auto; /* Conserve les proportions du logo *//* Limite la hauteur maximale pour qu'il ne prenne pas trop de place */
+    height: auto; /* Conserve les proportions du logo */
 }
