@@ -90,7 +90,6 @@ body {
     width: 100%;        
     box-sizing: border-box; 
     margin: 0;          
-    padding-top: 350px; /* Ajustez cette valeur selon l'espacement requis */
 }
 
 .classement-title {
@@ -123,7 +122,6 @@ body {
     width: 100%;        
     box-sizing: border-box; 
     margin: 0;          
-    padding-top: 350px; /* Ajustez cette valeur selon l'espacement requis */
 }
 
 .resultat-title {

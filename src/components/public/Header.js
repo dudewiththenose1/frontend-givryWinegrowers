@@ -1,6 +1,5 @@
 import React from "react";
-import  { useState, useEffect } from 'react';
-import { Navbar, NavbarContent, NavbarItem, Link, Button, NavbarBrand } from "@nextui-org/react";
+import { Navbar, NavbarContent, NavbarItem, Link,  NavbarBrand } from "@nextui-org/react";
 
 import logo from '@/styles/logo_removed.png';
 import './header.css';
