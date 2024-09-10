@@ -112,8 +112,12 @@ body {
 }
 
 .table-container {
-    width: 80%; /* Ajustez ce pourcentage selon vos besoins (par exemple, 60%, 50%, etc.) */
+    width: 90%; /* Ajustez ce pourcentage selon vos besoins (par exemple, 60%, 50%, etc.) */
     margin: 0 auto; /* Centre le tableau horizontalement */
+    margin-bottom: 50px; 
+    color: #ffe3ed;
+    font-weight: 800; /* Extra bold */
+   
 }
 
 /* Result Page*/
@@ -141,4 +145,36 @@ body {
     width: 100%;
     z-index: 1;
     
+}
+
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.rencontre-card {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.space-x-6 > * {
+    margin-left: 10px;
+    margin-right: 10px;
 }

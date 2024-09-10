@@ -11,7 +11,7 @@ const PreLoader = () => {
 
     return (
         <div className="preloader">
-                <span class="loader"></span> {/* Assurez-vous que le spinner est suffisamment grand */}
+                <span className="loader"></span> {/* Assurez-vous que le spinner est suffisamment grand */}
                 <img src={logo} alt="Logo" />
         </div>
     );
