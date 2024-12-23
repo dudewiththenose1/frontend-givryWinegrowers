@@ -25,7 +25,7 @@ export default function Login() {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        axios.post("https://backend-givrywinegrowers.onrender.com/login", credentials)
+        axios.post("http://localhost:8000/login", credentials)
         .then(res => {
             console.log(res)
                 accountService.saveUsername(credentials.username)

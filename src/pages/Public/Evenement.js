@@ -1,15 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Card, Divider } from "@nextui-org/react";
 import './equipes.css';
-import { resultatService } from '@/_services/resultat.service';
+import { classementService } from '@/_services';
+
+
 
 const Evenement = () => {
-    const [rencontres, setRencontres] = useState([]);
+    const [resultats, setResultats] = useState([]);
     const flag = useRef(false);
 
     useEffect(() => {
         if (flag.current === false) {
-            resultatService.getResultat()
+            classementService.getResultat()
                 .then(res => {
                     // Transforme les données pour les utiliser facilement
                     const transformedData = res.data.map((rencontre) => ({
@@ -19,7 +20,7 @@ const Evenement = () => {
                         exterieur: rencontre[3],
                         resultat: rencontre[4],
                     }));
-                    setRencontres(transformedData);
+                    setResultats(transformedData);
                 })
                 .catch(err => console.log(err));
         }
@@ -30,18 +31,31 @@ const Evenement = () => {
         <div className="resultat-page">
             <h1 className="resultat-title">RÉSULTATS</h1>
             <div className="card-container">
-                {rencontres.map((rencontre, index) => (
-                    <Card key={index} className="max-w-[800px] my-4 rencontre-card">
-                        <div className="flex  items-center space-x-6">
-                            <p> {rencontre.domicile}</p>
-                            <Divider orientation="vertical" />
-                            <p> {rencontre.resultat}</p>
-                            <p> {rencontre.date}</p>
-                            <p>{rencontre.heure}</p>
-                            <Divider orientation="vertical" />
-                            <p> {rencontre.exterieur}</p>
+                {resultats.map((resultat, index) => (
+                    <div className="game-summary">
+                        <div className="info-section">
+                            <div className="game-info">
+                                <div className="league-info">
+                                    <div>Pré-Région</div>
+                            </div>
+                                <div className="game-time">
+                                    <div>{resultat.date}</div>
+                                    <div>{resultat.heure}</div>
+                                </div>
+                            </div>
+                            <div className="game-details">
+                                <div className="team">
+                                    <div>{resultat.domicile}</div>
+                                </div>
+                                <div className="score">
+                                    <div>{resultat.resultat}</div>
+                                </div>
+                                <div className="team">
+                                    <div>{resultat.exterieur}</div>
+                                </div>
+                            </div>
                         </div>
-                    </Card>
+                    </div>
                 ))}
             </div>
         </div>

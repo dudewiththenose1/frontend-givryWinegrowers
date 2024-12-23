@@ -4,13 +4,14 @@ import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from 
 import './equipes.css';
 
 const columns = [
-    { key: "equipe", label: "Equipe" },
-    { key: "matchesJoues", label: "Matches Joués" },
-    { key: "matchesGagnes", label: "Matches Gagnés" },
-    { key: "matchesPerdus", label: "Matches Perdus" },
-    { key: "pointsMarques", label: "Points Marqués" },
-    { key: "pointsEncaisses", label: "Points Encaissés" },
-    { key: "diffPoints", label: "Différence de Points" },
+    { key: "equipe", label: "EQUIPE" },
+    {key: "points", label: "POINTS"},
+    { key: "matchesJoues", label: "MATCHES JOUES" },
+    { key: "matchesGagnes", label: "MATCHES GAGNES" },
+    { key: "matchesPerdus", label: "MATCHES PERDUS" },
+    { key: "pointsMarques", label: "POINTS MARQUES" },
+    { key: "pointsEncaisses", label: "POINTS ENCAISSES" },
+    { key: "diffPoints", label: "DIFFERENCE DE" },
 ];
 
 const Classement = () => {
@@ -24,12 +25,13 @@ const Classement = () => {
                     
                     const transformedData = res.data.map((equipe) => ({
                         equipe: equipe[0],
-                        matchesJoues: equipe[1],
-                        matchesGagnes: equipe[2],
-                        matchesPerdus: equipe[3],
-                        pointsMarques: equipe[4],
-                        pointsEncaisses: equipe[5],
-                        diffPoints: equipe[6],
+                        points: equipe[1],
+                        matchesJoues: equipe[2],
+                        matchesGagnes: equipe[3],
+                        matchesPerdus: equipe[4],
+                        pointsMarques: equipe[5],
+                        pointsEncaisses: equipe[6],
+                        diffPoints: equipe[7],
                     }));
                     setEquipes(transformedData);
                 })
@@ -49,7 +51,7 @@ const Classement = () => {
                     defaultSelectedKeys={["2"]} 
                     aria-label="classement">
                     <TableHeader columns={columns}>
-                        {(column) => <TableColumn key={column.key}>{column.label}</TableColumn>}
+                        {(column) => <TableColumn className="column-name" key={column.key}>{column.label}</TableColumn>}
                     </TableHeader>
                     <TableBody items={equipes}>
                         {(item) => (

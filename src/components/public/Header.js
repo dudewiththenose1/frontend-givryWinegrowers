@@ -9,10 +9,9 @@ const NoGuestNavbar = () => {
     
     return (
         <Navbar className="navbar" isBordered maxWidth="full">
-            <NavbarBrand>
-               
+            <NavbarBrand>      
             </NavbarBrand>
-            <NavbarContent className="hidden sm:flex gap-4" >
+            <NavbarContent className="hidden sm:flex gap-4" justify="center" >
                 <NavbarItem isActive>
                     <Link style={{ color: "#f08b53" }} href="/equipe" aria-current="page">
                         Equipes

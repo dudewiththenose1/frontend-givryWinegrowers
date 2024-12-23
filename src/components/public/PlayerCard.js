@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { joueurService } from '@/_services';
 
-import { Image, Card, CardBody } from '@nextui-org/react';
+import { Image, Card } from '@nextui-org/react';
 
 const PlayerCard = ({ joueur }) => {
     const [imageUrl, setImageUrl] = useState();
@@ -22,10 +22,11 @@ const PlayerCard = ({ joueur }) => {
     }, []);
 
     return (
-        <div className="player-card">
-            <Image width={300} isZoomed src={`http://localhost:8000/images/`+imageUrl} alt={`${joueur.nom} ${joueur.prenom}`} />
+        <div className="border-none" >
                 <div className="player-image">
-                <Card className="max-w-[300px]"><CardBody><p>{joueur.prenom} {joueur.nom}</p></CardBody> </Card>
+                <Card className="max-w-[300px]">
+            <Image width={300} isZoomed src={`http://localhost:8000/images/`+imageUrl} alt={`${joueur.nom} ${joueur.prenom}`} />
+                     </Card>
                 </div>
             
         </div>

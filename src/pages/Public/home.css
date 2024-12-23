@@ -1,7 +1,8 @@
 .image-container {
     position: relative;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+    overflow: hidden; /* Empêche le débordement horizontal */
 }
 
 .image {
@@ -13,6 +14,7 @@
     background-position: center;
     background-repeat: no-repeat;
     filter: brightness(60%);
+    
 }
 
 .image::after {
@@ -40,12 +42,12 @@
     display: flex;
     justify-content: center; /* Centre horizontalement le logo */
     transform: translateY(-600px);
-    opacity: 30%;
     
+    opacity: 30%;
 }
 
 .logo img {
-    transform: translateX(20px);
     max-width: 100%; /* Rend le logo responsive */
     height: auto; /* Conserve les proportions du logo */
+    transform: translateX(+20px);
 }

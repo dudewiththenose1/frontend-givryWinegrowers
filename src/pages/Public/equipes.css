@@ -31,11 +31,11 @@ body {
     padding-top: 350px; /* Ajustez cette valeur selon l'espacement requis */
 }
 
-.team-title {
-    background-color: var(--vt-hokieStone);
-    background-image: repeating-radial-gradient(
-        circle at 0 0,
-        transparent 0,
+    .team-title {
+        background-color: var(--vt-hokieStone);
+        background-image: repeating-radial-gradient(
+            circle at 0 0,
+            transparent 0,
         var(--vt-maroon) 24px
       ),
       repeating-linear-gradient(var(--vt-burntOrange), var(--vt-maroon));
@@ -55,7 +55,8 @@ body {
 
 .player-list {
     width: 100%;
-    padding-top: 340px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     padding-left : 10px;
    background-color: var(--vt-maroon);
     
@@ -120,6 +121,7 @@ body {
    
 }
 
+
 /* Result Page*/
 
 .resultat-page {
@@ -149,32 +151,82 @@ body {
 
 
 .card-container {
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
-.rencontre-card {
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 20px;
-    text-align: center;
+.game-summary {
+  display: flex;
+  flex-direction: column;
+  background-color: #transparent;
+  padding-bottom: 20px;
+  width: 100;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-.flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    gap: 10px;
+.info-section {
+  display: flex;
+  height: 180px;
+  background-color: #transparent;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
-.space-x-6 > * {
-    margin-left: 10px;
-    margin-right: 10px;
+.game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Répartit l'espace entre les enfants */
+  height: 100%; /* Assurez-vous que le parent a une hauteur définie */
+  width: 250px; /* Fond de la classe game-info */
+}
+
+.league-info, .game-time {
+  flex: 1; /* Permet aux sections de se partager l'espace */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Assure que chaque section prend toute la largeur */
+}
+
+.league-info {
+  background-color: black;
+  color: white;
+}
+
+
+.game-time {
+  text-align: center;
+  flex-direction: column;
+  background-color: white;
+  color: black; /* Utilisez "color" au lieu de "font-color" */
+}
+
+.game-details {
+  display: flex;
+  align-items: center;
+  background-color: #75787b;
+  width: 750px;
+  color: white;
+  
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  font-size: 1em;
+}
+
+
+
+.score {
+  display: flex;
+  align-items: center;
+  font-size: 3em;
 }

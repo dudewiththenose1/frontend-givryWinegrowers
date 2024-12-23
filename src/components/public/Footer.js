@@ -18,6 +18,9 @@ const Footer = () => {
                     <p className="footer-text">
                         Email: givrywinegrowers@gmail.com
                     </p>
+                    <p className="footer-text">
+                        Instagram: @givrywinegrowers
+                    </p>
                 </div>
             </div>
             <div className="footer-bottom">
