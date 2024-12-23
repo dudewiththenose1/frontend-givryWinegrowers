@@ -8,7 +8,12 @@ let getResultat = () => {
     return Axios.get('/classement/resultat');
 }
 
+let getTest = () => {
+    return Axios.get('/classement/test');
+}
+
 export const classementService = {
     getClassement,
-    getResultat
+    getResultat,
+    getTest
 }

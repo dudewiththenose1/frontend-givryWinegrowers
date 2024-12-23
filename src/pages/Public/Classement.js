@@ -17,12 +17,13 @@ const columns = [
 const Classement = () => {
     const [equipes, setEquipes] = useState([]);
     const flag = useRef(false);
-
+    const test = classementService.getTest();
+    console.log(test);
     useEffect(() => {
         if (flag.current === false) {
             classementService.getClassement()
                 .then(res => {
-                    
+                    console.log(res.data);
                     const transformedData = res.data.map((equipe) => ({
                         equipe: equipe[0],
                         points: equipe[1],
