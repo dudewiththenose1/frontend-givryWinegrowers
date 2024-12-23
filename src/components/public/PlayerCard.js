@@ -25,7 +25,7 @@ const PlayerCard = ({ joueur }) => {
         <div className="border-none" >
                 <div className="player-image">
                 <Card className="max-w-[300px]">
-            <Image width={300} isZoomed src={`http://localhost:8000/images/`+imageUrl} alt={`${joueur.nom} ${joueur.prenom}`} />
+                    <Image width={300} isZoomed src={`https://backend-givrywinegrowers.onrender.com/`+imageUrl} alt={`${joueur.nom} ${joueur.prenom}`} />
                      </Card>
                 </div>
             
