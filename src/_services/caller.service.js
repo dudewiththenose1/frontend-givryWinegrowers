@@ -2,7 +2,7 @@ import axios from 'axios';
 import {accountService} from './account.service'
 
 const Axios = axios.create({
-    baseURL: 'https://backend-givrywinegrowers.onrender.com/'
+    baseURL: '/api/'
 })
 
 // Intercepteur pour le token
