@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { classementService } from '@/_services';
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@nextui-org/react";
-import './equipes.css';
+import './classement.css';
 
 const columns = [
     { key: "equipe", label: "EQUIPE" },
@@ -11,7 +11,7 @@ const columns = [
     { key: "matchesPerdus", label: "MATCHES PERDUS" },
     { key: "pointsMarques", label: "POINTS MARQUES" },
     { key: "pointsEncaisses", label: "POINTS ENCAISSES" },
-    { key: "diffPoints", label: "DIFFERENCE DE" },
+    { key: "diffPoints", label: "DIFFERENCE DE POINTS" },
 ];
 
 const Classement = () => {

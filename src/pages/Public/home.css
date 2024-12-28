@@ -14,7 +14,6 @@
     background-position: center;
     background-repeat: no-repeat;
     filter: brightness(60%);
-    
 }
 
 .image::after {
@@ -42,7 +41,6 @@
     display: flex;
     justify-content: center; /* Centre horizontalement le logo */
     transform: translateY(-600px);
-    
     opacity: 30%;
 }
 
@@ -50,4 +48,31 @@
     max-width: 100%; /* Rend le logo responsive */
     height: auto; /* Conserve les proportions du logo */
     transform: translateX(+20px);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .logo {
+        transform: translateY(-400px);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        transform: translateY(-200px);
+    }
+
+    .image::after {
+        background: linear-gradient(to bottom, transparent 30%, black 100%);
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        transform: translateY(-100px);
+    }
+
+    .image::after {
+        background: linear-gradient(to bottom, transparent 20%, black 100%);
+    }
 }

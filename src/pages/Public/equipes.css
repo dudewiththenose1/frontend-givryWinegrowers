@@ -83,43 +83,70 @@ body {
     margin-top: 10px;
 }
 
-
-
-/*Classement Page*/
-
-.classement-page {
-    width: 100%;        
-    box-sizing: border-box; 
-    margin: 0;          
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .team-title {
+        font-size: 6rem;
+        padding: 80px 0;
+    }
 }
 
-.classement-title {
-    background-color: var(--vt-hokieStone);
-    background-image: repeating-radial-gradient(
-        circle at 100% 0,
-        transparent 0,
-        var(--vt-maroon) 24px
-      ),
-      repeating-linear-gradient(var(--vt-burntOrange), var(--vt-maroon));
-    color: #FFFFFF;
-    font-family: 'Acherus Grotesque', sans-serif;
-    font-weight: 800; /* Extra bold */
-    font-size: 8rem;
-    text-align: center;
-    padding: 100px 0; /* Espacement vertical */
-    width: 100%;
-    z-index: 1;
-    
+@media (max-width: 768px) {
+    .team-title {
+        font-size: 4rem;
+        padding: 60px 0;
+    }
+
+    .player-card {
+        flex: 1 1 200px;
+        max-width: 200px;
+    }
+
+    .player-card img {
+        height: 300px;
+    }
 }
 
-.table-container {
-    width: 90%; /* Ajustez ce pourcentage selon vos besoins (par exemple, 60%, 50%, etc.) */
-    margin: 0 auto; /* Centre le tableau horizontalement */
-    margin-bottom: 50px; 
-    color: #ffe3ed;
-    font-weight: 800; /* Extra bold */
-   
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .team-title {
+        font-size: 6rem;
+        padding: 80px 0;
+    }
 }
+
+@media (max-width: 768px) {
+    .team-title {
+        font-size: 4rem;
+        padding: 60px 0;
+    }
+
+    .player-card {
+        flex: 1 1 200px;
+        max-width: 200px;
+    }
+
+    .player-card img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 370px) {
+    .team-title {
+        font-size: 4rem;
+        padding: 60px 0;
+    }
+
+    .player-card {
+        flex: 1 1 200px;
+        max-width: 200px;
+    }
+
+    .player-card img {
+        height: 300px;
+    }
+}
+
 
 
 /* Result Page*/

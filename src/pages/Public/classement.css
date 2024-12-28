@@ -1,0 +1,170 @@
+/*Classement Page*/
+:root {
+    --vt-maroon: #861F41; /* Couleur de fond principale */
+    --vt-burntOrange: #BF5700; /* Couleur principale du texte */
+    --vt-hokieStone: #75787b; /* Couleur secondaire */
+    --table-container-width: 110%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--vt-maroon); 
+}
+
+@font-face {
+    font-family: 'Acherus Grotesque';
+    src: url('../../styles/AcherusGrotesque-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Acherus Grotesque', sans-serif;
+    font-weight: 800;
+}
+
+.classement-page {
+    width: 100%;        
+    box-sizing: border-box; 
+    margin: 0;          
+}
+
+.classement-title {
+    background-color: var(--vt-hokieStone);
+    background-image: repeating-radial-gradient(
+        circle at 100% 0,
+        transparent 0,
+        var(--vt-maroon) 24px
+    ),
+    repeating-linear-gradient(var(--vt-burntOrange), var(--vt-maroon));
+    color: #FFFFFF;
+    font-family: 'Acherus Grotesque', sans-serif;
+    font-weight: 800; /* Extra bold */
+    font-size: 8rem;
+    text-align: center;
+    padding: 100px 0; /* Espacement vertical */
+    width: 100%;
+    z-index: 1;
+}
+
+.table-container {
+    width: 90%; /* Ajustez ce pourcentage selon vos besoins (par exemple, 60%, 50%, etc.) */
+    margin: 0 auto; /* Centre le tableau horizontalement */
+    margin-bottom: 50px; 
+    color: #ffe3ed;
+    font-weight: 800; /* Extra bold */
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .classement-title {
+        font-size: 6rem;
+        padding: 80px 0;
+    }
+
+    body {
+        width: var(--table-container-width);
+    }
+
+    .table-container {
+        width: 80%;
+         margin: 0 30px;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+
+    body {
+        width: 110%;
+    }
+
+    .table-container {
+        width: 60%;
+         margin: 0 20px;
+          margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    body {
+        width: 140%;
+    }
+
+    .table-container {
+        width: 50%;
+         margin: 0 20px;
+          margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .classement-title {
+        font-size: 4rem;
+        padding: 60px 0;
+    }
+    
+    body {
+        width : 170%;
+    }
+
+    .table-container {
+        width: 40%;
+        margin: 0 20px;
+          margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 606px) {
+    .classement-title {
+        font-size: 4rem;
+        padding: 60px 0;
+    }
+    
+    body {
+        width : 200%;
+    }
+
+    .table-container {
+        width: 20%;
+        margin: 0 20px;
+          margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    .classement-title {
+        font-size: 3rem;
+        padding: 40px 0;
+    }
+
+    body {
+        width : 230%;
+    }
+
+    .table-container {
+        width: 10%;
+        margin: 0 20px;
+          margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 450px) {
+    .classement-title {
+        font-size: 2rem;
+        padding: 40px 0;
+    }
+
+    body {
+        width : 300%;
+    }
+
+    .table-container {
+        width: 10%;
+        margin: 0 50px;
+          margin-bottom: 100px;
+    }
+}
